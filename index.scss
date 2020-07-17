@@ -1,0 +1,184 @@
+//CONSIDERAÇÕES: Adicionei algumas imagens que estavam no layout e nao estavam na pasta nem no html, fiz pelo css.
+//Não foi mexido em nada no html.
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+}
+
+.hero,
+.results-content {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+.hero {
+  .hero-content {
+    .logo {
+      position: relative;
+      text-indent: -9999px;
+      img {
+        position: absolute;
+        left: 0;
+      }
+    }
+    h1 {
+      padding: 30px 0;
+    }
+    h2 {
+      padding-bottom: 50px;
+      color: #0b2a1e;
+      font-size: 70px;
+      word-wrap: break-word;
+      margin: 0;
+      width: 50%;
+      @media (max-width: 768px) {
+        width: 100%;
+        font-size: 50px;
+      }
+    }
+  }
+
+  .options-list {
+    justify-content: space-between;
+
+    li {
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+      width: 25%;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      img {
+        min-height: 75px;
+      }
+      p {
+        font-size: 18px;
+        color: #848484;
+        line-height: 1.5em;
+        &::first-letter {
+          font-weight: bold;
+        }
+      }
+      div {
+        margin-bottom: 50px;
+        width: 100%;
+        select {
+          color: #a8a8a8;
+          width: 100%;
+          padding: 15px;
+          border-radius: 30px;
+          border: 1px solid #a8a8a8;
+          font-size: 16px;
+          outline: none;
+          appearance: none;
+          transition: all 0.3s ease;
+          background: url("./images/hero/arrow.svg") 93% 50% no-repeat;
+          &:hover {
+            opacity: 0.5;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.results {
+  background: #f6f6f6;
+  padding-bottom: 30px;
+  .results-content {
+    > a {
+      display: block;
+      border: 1px solid #15573f;
+      text-align: center;
+      padding: 15px;
+      border-radius: 25px;
+      color: #196146;
+      text-decoration: none;
+      text-transform: lowercase;
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+    h2 {
+      font-size: 70px;
+      margin: 30px 0 50px 0;
+      @media (max-width: 768px) {
+        width: 100%;
+        font-size: 50px;
+      }
+    }
+    padding-top: 130px;
+    background: url("./images/hero/pick.svg") 15px 50px no-repeat;
+  }
+  .results-list {
+    justify-content: space-between;
+    li {
+      margin-bottom: 23px;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      width: 32%;
+      display: flex;
+      .card {
+        color: #257556;
+        border-radius: 5px;
+        background: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 30px;
+        font-size: 20px;
+        h4 {
+          width: 100%;
+        }
+        > img {
+          min-height: 190px;
+        }
+        .card-info {
+          width: 100%;
+          display: flex;
+          strong {
+            width: 100%;
+            display: block;
+          }
+          img:not(first-child) {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

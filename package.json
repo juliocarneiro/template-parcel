@@ -1,0 +1,14 @@
+{
+  "name": "test-template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html --open"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
+  },
+  "keywords": [],
+  "description": ""
+}
